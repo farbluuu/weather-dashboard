@@ -59,12 +59,12 @@ export const ForecastCard: React.FC<ForecastCardProps> = ({ forecast }) => {
           </div>
           <span className="tracking-tight">{viewMode === '24h' ? '24-Hour Forecast' : '5-Day Forecast'}</span>
         </h3>
-        <button 
-          onClick={toggleView}
-          className="text-[11px] font-black uppercase text-indigo-500 bg-indigo-50 px-5 py-2.5 rounded-full tracking-widest hover:bg-indigo-500 hover:text-white transition-all hover:shadow-lg hover:shadow-indigo-500/30 active:scale-95"
-        >
-          {viewMode === '24h' ? 'View 5 Days' : 'View 24 Hours'}
-        </button>
+          {/* <button 
+            onClick={toggleView}
+            className="text-[11px] font-black uppercase text-indigo-500 bg-indigo-50 px-5 py-2.5 rounded-full tracking-widest hover:bg-indigo-500 hover:text-white transition-all hover:shadow-lg hover:shadow-indigo-500/30 active:scale-95"
+          >
+            {viewMode === '24h' ? 'View 5 Days' : 'View 24 Hours'}
+          </button> */}
       </div>
 
       <div className="relative z-10 flex gap-4 overflow-x-auto pb-6 pt-2 scrollbar-hide snap-x relative mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)">
