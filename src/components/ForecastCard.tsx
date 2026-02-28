@@ -52,7 +52,7 @@ export const ForecastCard: React.FC<ForecastCardProps> = ({ forecast }) => {
     <div className="col-span-1 md:col-span-12 bg-white/70 backdrop-blur-2xl border border-white/80 p-8 rounded-[2.5rem] shadow-[0_8px_40px_rgb(0,0,0,0.06)] hover:shadow-[0_16px_60px_rgb(0,0,0,0.08)] transition-all duration-500 overflow-hidden relative">
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-50/50 rounded-full blur-[100px] pointer-events-none"></div>
 
-      <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
+      <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4 scrollbar">
         <h3 className="font-bold text-slate-800 flex items-center gap-3 text-lg">
           <div className="p-2.5 bg-indigo-50 text-indigo-500 rounded-[1rem] shadow-sm">
             {viewMode === '24h' ? <Clock size={20} /> : <CalendarDays size={20} />}
