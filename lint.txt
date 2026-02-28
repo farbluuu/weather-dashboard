@@ -1,0 +1,39 @@
+
+> weather-dashboard@0.1.0 lint
+> eslint
+
+
+C:\Users\usEr\OneDrive\เดสก์ท็อป\farbluu\devto\landing-pages\weather-dashboard\src\app\page.tsx
+  60:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\usEr\OneDrive\เดสก์ท็อป\farbluu\devto\landing-pages\weather-dashboard\src\components\ForecastCard.tsx
+  38:72  warning  'idx' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\usEr\OneDrive\เดสก์ท็อป\farbluu\devto\landing-pages\weather-dashboard\src\components\HeroWeatherCard.tsx
+  12:30  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\usEr\OneDrive\เดสก์ท็อป\farbluu\devto\landing-pages\weather-dashboard\src\components\HeroWeatherCard.tsx:12:30
+  10 |
+  11 | export const HeroWeatherCard: React.FC<HeroWeatherCardProps> = ({ weather }) => {
+> 12 |   const isNight = weather ? (Date.now() / 1000 > weather.sys.sunset || Date.now() / 1000 < weather.sys.sunrise) : false;
+     |                              ^^^^^^^^^^ Cannot call impure function
+  13 |   const condition = weather?.weather[0].main || "Clear";
+  14 |   
+  15 |   let bgGradient = "from-sky-400 to-indigo-500 shadow-indigo-500/20";                                            react-hooks/purity
+  12:72  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\usEr\OneDrive\เดสก์ท็อป\farbluu\devto\landing-pages\weather-dashboard\src\components\HeroWeatherCard.tsx:12:72
+  10 |
+  11 | export const HeroWeatherCard: React.FC<HeroWeatherCardProps> = ({ weather }) => {
+> 12 |   const isNight = weather ? (Date.now() / 1000 > weather.sys.sunset || Date.now() / 1000 < weather.sys.sunrise) : false;
+     |                                                                        ^^^^^^^^^^ Cannot call impure function
+  13 |   const condition = weather?.weather[0].main || "Clear";
+  14 |   
+  15 |   let bgGradient = "from-sky-400 to-indigo-500 shadow-indigo-500/20";  react-hooks/purity
+
+✖ 4 problems (3 errors, 1 warning)
+
